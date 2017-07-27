@@ -1,5 +1,10 @@
 <h1>Hot Reads Here</h1>
 
-<% @links.each do |link| %>
-<% link.url %>
-<% end %>
+<table class="hot-links">
+  <% @links.each_with_index do |link, i| %>
+  <tr>
+    <td><%= i + 1 %></td>
+    <td class='single-link'><%= link.url %></td>
+  </tr>
+  <% end %>
+</table>
