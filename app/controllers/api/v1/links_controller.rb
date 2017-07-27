@@ -8,7 +8,7 @@ class Api::V1::LinksController < ApplicationController
   def create
     @link = Link.find_or_initialize_by(link_params)
     if @link.save && @link.update_count
-      render json: @link, status: 201
+      render json: Link.ten_hot, status: 201
       # head 201
     else
       head 400
