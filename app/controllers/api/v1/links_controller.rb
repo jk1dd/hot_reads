@@ -1,4 +1,6 @@
 class Api::V1::LinksController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  
   def index
     @links = Link.all
   end
